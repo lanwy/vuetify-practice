@@ -1,9 +1,15 @@
 import Vue from 'vue'
-import './plugins/vuetify'
+import './plugins'
+import i18n from './i18n'
 import App from './App.vue'
+import router from './router'
+
 
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  el: '#app',
+  router,
+  i18n,
+  render: h => h(App)
+})
